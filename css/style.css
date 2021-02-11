@@ -45,16 +45,23 @@ body{
     height: 35px;
 }
 
+/* .logo:hover {
+    animation: moveInRight 1s ease-out;
+} */
+
 .text-box{
    position: absolute;
    top: 40%;
    left: 50%; 
    transform: translate(-50%, -50%);
+   text-align: center;
 }
    
 .primary{
     color: #fff;
     text-transform: uppercase; 
+    backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .primary-main{
@@ -116,4 +123,76 @@ body{
         opacity : 1;
         transform: translate(0);
     }
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity :0;
+        /* translateY- top to bottom */
+        transform: translateY(30px);
+
+    }
+
+    100%{
+        opacity : 1;
+        transform: translate(0);
+    }
+}
+
+/*link here acts as a pseudo class*/
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    /*padding at top and bottom right and left*/
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    /* shadow for the button why .2 to keep it as transparent*/
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: #fff;
+    color:  #777;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    border-radius: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* it defines the position of element if they are one on top of the other */
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    /* fades the element */
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    /* this property automatically applies styles of zero percent before animation starts */
+    animation-fill-mode: backwards;
 }
