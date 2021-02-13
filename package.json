@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamyaaU/Natours-Css.git"
+  },
+  "author": "Ramya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamyaaU/Natours-Css/issues"
+  },
+  "homepage": "https://github.com/RamyaaU/Natours-Css#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {}
+}
