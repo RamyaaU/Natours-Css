@@ -1,0 +1,61 @@
+/*link here acts as a pseudo class*/
+.btn{
+    &:link,
+    &:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    /*padding at top and bottom right and left*/
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+    }
+
+    &:hover{
+    transform: translateY(-3px);
+    /* shadow for the button why .2 to keep it as transparent*/
+    box-shadow: 0 10px 20px rgba($color-black,.2);
+
+    &::after{
+        transform: scaleX(1.4) scaleY(1.6);
+        /* fades the element */
+        opacity: 0;
+        }
+    }
+
+    &:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+
+    &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+        background-color: $color-white;
+    }
+    }
+
+    &::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    border-radius: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* it defines the position of element if they are one on top of the other */
+    z-index: -1;
+    transition: all .4s;
+    }
+
+ 
+    &--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    /* this property automatically applies styles of zero percent before animation starts */
+    animation-fill-mode: backwards;
+    }
+}
