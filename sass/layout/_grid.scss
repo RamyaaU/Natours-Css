@@ -1,0 +1,37 @@
+.row {
+      // 10px = 1rem 
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    //means selects everything except the last child
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    [s]
+    //calc is an mathematical functions
+    //100% of width is subtracted from gutter
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+        background-color: orangered;
+        float: left;
+
+        &:not(:last-child) {
+            margin-bottom: $gutter-horizontal;
+        }
+    }
+
+
+}
+
+//.row::after
+
+
+
+
+
+
+
+
