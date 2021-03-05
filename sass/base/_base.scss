@@ -1,18 +1,16 @@
-// this is a partial sass file
-
 *,
 *::after,
-*::before{
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
-html{
-    //defines what 1rem is
+html {
+    // This defines what 1rem is
     font-size: 62.5%;
 }
 
-body{
+body {
     box-sizing: border-box;
 }

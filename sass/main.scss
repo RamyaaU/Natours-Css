@@ -1,26 +1,25 @@
-@import "pages/home";
-
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "components/button";
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
+@import "components/bg-video";
+@import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/form";
+@import "components/popup";
+@import "components/story";
+
+@import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
+@import "layout/navigation";
 
-@import "base/base";
-@import "base/animations";
-@import "base/utilities";
-@import "base/animations";
-
-
-/* .logo:hover {
-    animation: moveInRight 1s ease-out;
-} */
-
-
-
-
-
+@import "pages/home";
 
